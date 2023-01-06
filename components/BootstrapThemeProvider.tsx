@@ -5,6 +5,7 @@ const ThemeMap = {
   main: "/styles/main.css",
   custom: "/styles/custom.css",
   cerulean: "https://bootswatch.com/5/cerulean/bootstrap.min.css",
+  cosmo: "https://bootswatch.com/5/cosmo/bootstrap.min.css",
 };
 type ThemeKey = keyof typeof ThemeMap;
 
