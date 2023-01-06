@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row, Stack } from "react-bootstrap";
+import { useTheme } from "../components/BootstrapThemeProvider";
 
 const Home: NextPage = () => {
+  const { setTheme } = useTheme();
   return (
     <Container>
       <Row>
@@ -13,7 +15,15 @@ const Home: NextPage = () => {
             nostrum doloremque. Sequi laboriosam dicta praesentium, sit
             aspernatur non molestiae voluptates beatae.
           </p>
-          <Button>My Button</Button>
+          <Stack direction="vertical" gap={2}>
+            <Button onClick={() => setTheme("main")}>Switch Main Theme</Button>
+            <Button onClick={() => setTheme("custom")}>
+              Switch Custom Theme
+            </Button>
+            <Button onClick={() => setTheme("cerulean")}>
+              Switch Cerulean Theme
+            </Button>
+          </Stack>
         </Col>
       </Row>
     </Container>
